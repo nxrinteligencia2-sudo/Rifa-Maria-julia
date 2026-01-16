@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa Profissional 100</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>Rifa Digital</h1>
+            <div class="stats">
+                <span id="sold-count">Vendidos: 0</span>
+                <button id="reset-btn" class="btn-red"><i data-lucide="refresh-cw"></i></button>
+            </div>
+        </header>
+
+        <main class="grid-container" id="rifa-grid">
+            </main>
+    </div>
+
+    <div id="modal-buyer" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Número 00</h2>
+                <button id="close-modal"><i data-lucide="x"></i></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="buyer-name" placeholder="Nome do Comprador">
+                <input type="tel" id="buyer-phone" placeholder="Telefone (Opcional)">
+                <button id="save-buyer-btn" class="btn-green">Confirmar Reserva</button>
+                <div id="info-reserva" class="info-reserva" style="display: none;">
+                    <hr>
+                    <p id="display-info"></p>
+                    <button id="liberar-btn" class="btn-red-outline">Liberar Número</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
