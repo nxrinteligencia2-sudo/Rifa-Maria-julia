@@ -1,18 +1,35 @@
-.grid-container {
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background-color: #fdf2f8; font-family: sans-serif; }
+
+.header-pink { background: #db2777; color: white; padding: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.header-container { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.sold-badge { background: white; color: #db2777; padding: 0.25rem 0.75rem; border-radius: 999px; font-weight: bold; }
+.btn-icon-red { background: #ef4444; border: none; padding: 8px; border-radius: 8px; color: white; cursor: pointer; }
+
+.grid-rifa {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* 10 colunas como na foto */
-    gap: 1px; /* Linhas finas separando os números */
-    background: #fdf2f8; /* Fundo rosado claro da sua imagem */
+    grid-template-columns: repeat(10, 1fr); /* 10 colunas */
+    gap: 1px;
+    background: #d1d5db;
     border: 1px solid #d1d5db;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
+@media (max-width: 640px) { .grid-rifa { grid-template-columns: repeat(5, 1fr); } }
+
 .num-card {
-    background: white;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.9rem;
-    color: #374151;
-    border: 0.5px solid #e5e7eb; /* Estilo de tabela */
+    background: white; aspect-ratio: 1/1; display: flex; align-items: center;
+    justify-content: center; font-size: 0.9rem; font-weight: 600; cursor: pointer;
 }
+.num-card.vendido { background: #10b981; color: white; }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 1rem; }
+.modal-box { background: white; border-radius: 0.5rem; width: 100%; max-width: 400px; overflow: hidden; }
+.modal-header { display: flex; justify-content: space-between; padding: 1rem; border-bottom: 1px solid #eee; }
+.btn-x { background: none; border: none; color: #666; cursor: pointer; }
+.modal-body { padding: 1.5rem; }
+input { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 0.5rem; margin-bottom: 1rem; }
+.btn-confirm { width: 100%; padding: 0.75rem; background: #10b981; color: white; border: none; border-radius: 0.5rem; font-weight: bold; cursor: pointer; }
+.btn-release { width: 100%; padding: 0.75rem; background: #ef4444; color: white; border: none; border-radius: 0.5rem; font-weight: bold; margin-top: 1rem; cursor: pointer; }
+
